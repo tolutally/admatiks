@@ -1,0 +1,60 @@
+/* =========================================================
+   Admatiks Studios — styles
+   Essential Lenis smooth-scroll resets (required by the library).
+   All visual styling is handled by Tailwind utility classes in index.html.
+   ========================================================= */
+
+html.lenis { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-scrolling iframe { pointer-events: none; }
+
+/* ---------- Process cube ("reach them" section) ---------- */
+.backface-hidden { -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+
+@keyframes rotateCubeY {
+  from { transform: rotateX(-10deg) rotateY(0deg); }
+  to { transform: rotateX(-10deg) rotateY(360deg); }
+}
+
+.cube-rotate {
+  animation: rotateCubeY 24s infinite linear;
+  will-change: transform;
+}
+.cube-rotate:hover { animation-play-state: paused; }
+
+/* hide scrollbar on the mobile process carousel */
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cube-rotate { animation: none; }
+}
+
+/* ---------- What We Do: mobile image spotlight (no hover on touch) ---------- */
+@media (max-width: 767px) {
+  #capabilities ul > li { padding-top: 1.1rem; padding-bottom: 1.1rem; }
+
+  #capabilities ul > li > img {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.75rem;
+    opacity: 0;
+    transform: none;
+    filter: brightness(0.4);
+    transition: opacity 0.45s ease;
+    z-index: 5;
+    pointer-events: none;
+  }
+  #capabilities ul > li.is-active > img { opacity: 1; }
+
+  #capabilities ul > li > span { position: relative; z-index: 10; transition: color 0.35s ease; }
+  #capabilities ul > li.is-active > span { color: #ffffff !important; }
+}
