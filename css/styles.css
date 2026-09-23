@@ -58,3 +58,7 @@ html.lenis { height: auto; }
   #capabilities ul > li > span { position: relative; z-index: 10; transition: color 0.35s ease; }
   #capabilities ul > li.is-active > span { color: #ffffff !important; }
 }
+
+/* ---------- Header: solid dark over light sections ---------- */
+#header { transition: transform 0.3s ease, background-color 0.35s ease; }
+#header.header--solid { background-color: #0d1210; }

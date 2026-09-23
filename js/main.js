@@ -277,6 +277,26 @@ if (capItems.length) {
     spotlight();
 }
 
+// Header turns solid dark over the light sections so it stays legible
+(function () {
+    const header = document.getElementById('header');
+    if (!header) return;
+    const lightSections = ['#capabilities', '#clients'].map((s) => document.querySelector(s)).filter(Boolean);
+    let scheduled = false;
+    const update = () => {
+        scheduled = false;
+        const overLight = lightSections.some((sec) => {
+            const r = sec.getBoundingClientRect();
+            return r.top <= 96 && r.bottom >= 0;
+        });
+        header.classList.toggle('header--solid', overLight);
+    };
+    const req = () => { if (scheduled) return; scheduled = true; requestAnimationFrame(update); };
+    lenis.on('scroll', req);
+    window.addEventListener('resize', req);
+    update();
+})();
+
 // Preloader — hold the curtain until fonts are ready, then reveal and play the hero
 (function () {
     const preloader = document.getElementById('preloader');

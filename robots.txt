@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://admatiksstudios.com/sitemap.xml
+Sitemap: https://admatiks.com/sitemap.xml
