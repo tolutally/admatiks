@@ -52,7 +52,6 @@
     <!-- Resource hints: warm up third-party origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://code.iconify.design">
@@ -62,8 +61,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS (precompiled static build; regenerate with: npx tailwindcss@3 -c ./tailwind.config.js -i ./css/tailwind-input.css -o ./css/tailwind.css --minify) -->
+    <link rel="stylesheet" href="css/tailwind.css">
     <!-- Iconify -->
     <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <!-- GSAP & Lenis -->
@@ -206,7 +205,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
           <!-- Project 1 -->
           <article class="relative aspect-square w-full overflow-hidden group cursor-pointer bg-[#0a0a0a]">
-            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0123d78b-e3e7-4cf6-a33b-157ed4e4205d_3840w.png" alt="Matera product launch campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0123d78b-e3e7-4cf6-a33b-157ed4e4205d_3840w.png" loading="lazy" decoding="async" alt="Matera product launch campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <!-- Always-visible label (mobile) -->
             <div class="absolute inset-x-0 bottom-0 p-5 md:hidden bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-transparent">
               <h3 class="font-['Anton',sans-serif] text-3xl text-white uppercase tracking-tight leading-none">Matera</h3>
@@ -222,7 +221,7 @@
 
           <!-- Project 2 -->
           <article class="relative aspect-square w-full overflow-hidden group cursor-pointer bg-[#0a0a0a]">
-            <img src="/public/paid-media.jpg" alt="Chance paid media campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="/public/paid-media.jpg" loading="lazy" decoding="async" alt="Chance paid media campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-x-0 bottom-0 p-5 md:hidden bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-transparent">
               <h3 class="font-['Anton',sans-serif] text-3xl text-white uppercase tracking-tight leading-none">Chance</h3>
               <p class="font-['Inter',sans-serif] text-[#e2e1d3]/70 uppercase tracking-widest text-[10px] mt-1">Paid Media Campaign · 2.8x ROAS</p>
@@ -236,7 +235,7 @@
 
           <!-- Project 3 -->
           <article class="relative aspect-square w-full overflow-hidden group cursor-pointer bg-[#0a0a0a]">
-            <img src="/public/social-media-campaign.jpg" alt="Silvr social campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="/public/social-media-campaign.jpg" loading="lazy" decoding="async" alt="Silvr social campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-x-0 bottom-0 p-5 md:hidden bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-transparent">
               <h3 class="font-['Anton',sans-serif] text-3xl text-white uppercase tracking-tight leading-none">Silvr</h3>
               <p class="font-['Inter',sans-serif] text-[#e2e1d3]/70 uppercase tracking-widest text-[10px] mt-1">Social Campaign · +64% Engagement</p>
@@ -250,7 +249,7 @@
 
           <!-- Project 4 -->
           <article class="relative aspect-square w-full overflow-hidden group cursor-pointer bg-[#0a0a0a]">
-            <img src="/public/brand-comms.jpg" alt="Intramuros brand communications" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="/public/brand-comms.jpg" loading="lazy" decoding="async" alt="Intramuros brand communications" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-x-0 bottom-0 p-5 md:hidden bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-transparent">
               <h3 class="font-['Anton',sans-serif] text-3xl text-white uppercase tracking-tight leading-none">Intramuros</h3>
               <p class="font-['Inter',sans-serif] text-[#e2e1d3]/70 uppercase tracking-widest text-[10px] mt-1">Brand Communications</p>
@@ -271,7 +270,7 @@
             <span class="font-['Anton',sans-serif] text-[clamp(2.2rem,7vw,7rem)] leading-[0.85] uppercase tracking-tighter text-[#111111] md:text-[#c4c4c4] transition-all duration-500 ease-out md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:!text-[#111111] cursor-pointer inline-block z-20 relative will-change-auto">
               META ADS
             </span>
-            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1200&q=80" alt="Meta ad creative" class="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
+            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1200&q=80" loading="lazy" decoding="async" alt="Meta ad creative" class="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
           </li>
 
           <!-- Item 2 -->
@@ -279,7 +278,7 @@
             <span class="font-['Anton',sans-serif] text-[clamp(2.2rem,7vw,7rem)] leading-[0.85] uppercase tracking-tighter text-[#111111] md:text-[#c4c4c4] transition-all duration-500 ease-out md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:!text-[#111111] cursor-pointer inline-block z-20 relative will-change-auto">
               GOOGLE ADS
             </span>
-            <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=1200&q=80" alt="Search advertising" class="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
+            <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=1200&q=80" loading="lazy" decoding="async" alt="Search advertising" class="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
           </li>
 
           <!-- Item 3 -->
@@ -287,7 +286,7 @@
             <span class="font-['Anton',sans-serif] text-[clamp(2.2rem,7vw,7rem)] leading-[0.85] uppercase tracking-tighter text-[#111111] md:text-[#c4c4c4] transition-all duration-500 ease-out md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:!text-[#111111] cursor-pointer inline-block z-20 relative will-change-auto">
               TIKTOK ADS
             </span>
-            <img src="https://images.unsplash.com/photo-1596558450268-9c27524ba856?auto=format&fit=crop&w=1200&q=80" alt="Short-form video content" class="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
+            <img src="https://images.unsplash.com/photo-1596558450268-9c27524ba856?auto=format&fit=crop&w=1200&q=80" loading="lazy" decoding="async" alt="Short-form video content" class="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
           </li>
 
           <!-- Item 4 -->
@@ -295,7 +294,7 @@
             <span class="font-['Anton',sans-serif] text-[clamp(2.2rem,7vw,7rem)] leading-[0.85] uppercase tracking-tighter text-[#111111] md:text-[#c4c4c4] transition-all duration-500 ease-out md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:!text-[#111111] cursor-pointer inline-block z-20 relative will-change-auto">
               SOCIAL MEDIA MANAGEMENT
             </span>
-            <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1200&q=80" alt="Social feed content" class="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
+            <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1200&q=80" loading="lazy" decoding="async" alt="Social feed content" class="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
           </li>
 
           <!-- Item 5 -->
@@ -303,7 +302,7 @@
             <span class="font-['Anton',sans-serif] text-[clamp(2.2rem,7vw,7rem)] leading-[0.85] uppercase tracking-tighter text-[#111111] md:text-[#c4c4c4] transition-all duration-500 ease-out md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:!text-[#111111] cursor-pointer inline-block z-20 relative will-change-auto">
               INFLUENCER CAMPAIGNS
             </span>
-            <img src="https://images.unsplash.com/photo-1533470192478-9897d90d5461?auto=format&fit=crop&w=1200&q=80" alt="Creator campaign" class="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
+            <img src="https://images.unsplash.com/photo-1533470192478-9897d90d5461?auto=format&fit=crop&w=1200&q=80" loading="lazy" decoding="async" alt="Creator campaign" class="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
           </li>
 
           <!-- Item 6 -->
@@ -311,7 +310,7 @@
             <span class="font-['Anton',sans-serif] text-[clamp(2.2rem,7vw,7rem)] leading-[0.85] uppercase tracking-tighter text-[#111111] md:text-[#c4c4c4] transition-all duration-500 ease-out md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:!text-[#111111] cursor-pointer inline-block z-20 relative will-change-auto">
               ONLINE PR &amp; BLOG PLACEMENTS
             </span>
-            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80" alt="Editorial publication" class="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80" loading="lazy" decoding="async" alt="Editorial publication" class="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
           </li>
 
           <!-- Item 7 -->
@@ -319,7 +318,7 @@
             <span class="font-['Anton',sans-serif] text-[clamp(2.2rem,7vw,7rem)] leading-[0.85] uppercase tracking-tighter text-[#111111] md:text-[#c4c4c4] transition-all duration-500 ease-out md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:!text-[#111111] cursor-pointer inline-block z-20 relative will-change-auto">
               CONTENT CREATION
             </span>
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" alt="Content production" class="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" loading="lazy" decoding="async" alt="Content production" class="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
           </li>
 
           <!-- Item 8 -->
@@ -327,7 +326,7 @@
             <span class="font-['Anton',sans-serif] text-[clamp(2.2rem,7vw,7rem)] leading-[0.85] uppercase tracking-tighter text-[#111111] md:text-[#c4c4c4] transition-all duration-500 ease-out md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:!text-[#111111] cursor-pointer inline-block z-20 relative will-change-auto">
               CAMPAIGN LAUNCHES
             </span>
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="Campaign launch" class="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" loading="lazy" decoding="async" alt="Campaign launch" class="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
           </li>
 
           <!-- Item 9 -->
@@ -335,7 +334,7 @@
             <span class="font-['Anton',sans-serif] text-[clamp(2.2rem,7vw,7rem)] leading-[0.85] uppercase tracking-tighter text-[#111111] md:text-[#c4c4c4] transition-all duration-500 ease-out md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:!text-[#111111] cursor-pointer inline-block z-20 relative will-change-auto">
               MEDIA BUYING
             </span>
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Media planning and buying" class="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" loading="lazy" decoding="async" alt="Media planning and buying" class="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 w-[20vw] max-w-[350px] aspect-[16/10] object-cover rounded-2xl opacity-0 md:group-hover/item:opacity-100 transition-all duration-500 ease-out pointer-events-none z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-95 md:group-hover/item:scale-100 will-change-transform">
           </li>
         </ul>
       </section>
@@ -368,7 +367,7 @@
             <a href="#contact" class="group cursor-pointer client-item reveal-up opacity-0 translate-y-8">
               <div class="relative aspect-[16/9] rounded-xl overflow-hidden mb-6 bg-white border border-gray-200 client-img-container shadow-sm transition-all duration-500">
                 <div class="absolute inset-0 bg-gradient-to-tr from-gray-200/40 to-transparent opacity-50 z-10"></div>
-                <img src="/public/startup-pic-naija.jpg" alt="Startup team launching" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                <img src="/public/startup-pic-naija.jpg" loading="lazy" decoding="async" alt="Startup team launching" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
                 <div class="absolute top-4 right-4 z-20 px-3 py-1.5 bg-white/90 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest rounded-md text-[#18181B] border border-gray-100 shadow-sm">
                   Startups
                 </div>
@@ -389,7 +388,7 @@
             <a href="#contact" class="group cursor-pointer lg:mt-24 client-item reveal-up opacity-0 translate-y-8">
               <div class="relative aspect-[16/9] rounded-xl overflow-hidden mb-6 bg-white border border-gray-200 client-img-container shadow-sm transition-all duration-500">
                 <div class="absolute inset-0 bg-gradient-to-tr from-gray-200/40 to-transparent opacity-50 z-10"></div>
-                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80" alt="Small and medium business storefront" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80" loading="lazy" decoding="async" alt="Small and medium business storefront" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
                 <div class="absolute top-4 right-4 z-20 px-3 py-1.5 bg-white/90 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest rounded-md text-[#18181B] border border-gray-100 shadow-sm">
                   SMEs
                 </div>
